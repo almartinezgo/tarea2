@@ -1,0 +1,114 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9f7;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #8c9c73;
+    line-height: 18px;
+}
+
+#outer {
+    position: relative;
+    width: 80%;
+    margin-top: 10px;
+    background-color: #fff;
+    border: initial;
+    overflow: overlay;
+    margin: 0px auto;
+}
+
+#header {
+    max-width: 100%;
+    display: flex;       
+    align-items: center;
+}
+
+#div-titulo {
+    text-align: center;
+    width: 30%;
+    padding: 10px 0px 0px 15px;
+    color: #000010;
+}
+
+#logo {
+    margin-top: 5px;
+    height: 150px;
+    width: 200px;
+}
+
+#presentacion {
+    width: 70%;
+    background: #fff;
+    border: 4px;
+    padding: 12px 16px;
+    margin: 15px 100px 15px 15px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.secciones {
+    margin: 15px 15px;
+}
+
+.exposicion {
+    background-color: #fff9d9;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    border: 4px;
+    padding: 12px 16px;
+    margin: 15px 80px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.paisaje {
+    height: 178px;
+    width: 200px;
+}
+
+.marco-imagen {
+    width: 35%;
+    padding: 5px; /*Padding: Contorno que rodea el contenido*/
+    border-radius: 2px; 
+    border: 1px solid #000000; /*Border: Espacio que se encuentra entre el Padding y Margin*/
+    margin: 20px; /*Margin: Separador del elemento con otros (capa externa)*/
+    outline: 10px solid #3a2410;
+}
+
+.marco-imagen:hover {
+    border: 5px solid #8c9c73;
+}
+
+.info-imagen {
+    width: 64%;
+    float: right; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    
+}
+
+.obra-arte {
+    color: #000000;
+    text-align: center;
+    margin: 5px 0;
+}
+
+strong.obra-arte {
+    font-size: 32px;
+    line-height: 1;
+}
+
+p.obra-arte {
+    font-size: 24px;
+    margin: 20px;
+}
