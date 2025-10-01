@@ -12,10 +12,10 @@ Propiedades a Utilizar
     -  Overflow                         ✔
     -  Visibility                       ✔
 
-    3. Flexbox en CSS3                  a
+    3. Flexbox en CSS3                  ✔
     -  Flex Container                   ✔
     -  Flex Items                       ✔
-    -  Flex Responsive                  a
+    -  Flex Responsive                  ✔
 */
 
 * {
@@ -243,12 +243,12 @@ p.p-pintura {
 .pez {order: 3}
 
 .dibujo {
-
     border: 1px solid black;
     max-width: 100%;
     height: auto;
 }
 
+/*Flex Responsive*/
 @media (max-width: 600px) {
     .cont-fila {
         flex-direction: column;
