@@ -37,212 +37,58 @@
                 <p class="obra-arte">No sé qué poner :/</p>
             </div>
         </div>
+
+        <!--Segunda parte-->
+
+        <button class="ocultar" onclick="alternar()">Ocultar Descripción</button>
+
+
+        <div class="exposicion">
+            <img class="pintura" src="multimedia/elgrito.png" />
+            <div id="desc-uno" class="info-pintura">
+                <strong class="strong-pintura">El Grito</strong>
+                <p class="p-pintura">El grito es el título de cuatro cuadros del noruego Edvard Munch. La versión más
+                    famosa se encuentra en la Galería Nacional de Noruega y fue completada en 1893. Otras dos versiones
+                    del cuadro se encuentran en el Museo Munch, también en Oslo, mientras que la cuarta versión
+                    pertenece a una colección particular.</p>
+            </div>
+        </div>
+        <div class="exposicion">
+            <img class="pintura" src="multimedia/lamonalisa.png" />
+            <div id="desc-dos" class="info-pintura">
+                <strong class="strong-pintura">El Grito</strong>
+                <p class="p-pintura">El retrato de Lisa Gherardini, esposa de Francesco del Giocondo,​ más conocido
+                    como La Gioconda (La Joconde, en francés) o Mona Lisa, es una obra pictórica de Leonardo da Vinci.
+                    Fue adquirida por el rey Francisco I de Francia a comienzos del siglo XVI y desde entonces es
+                    propiedad del Estado francés. Está expuesta en el Museo del Louvre de París, siendo, sin duda, la
+                    «joya» de sus colecciones.</p>
+            </div>
+        </div>
+
+        <script>
+            const elementoUno = document.getElementById('desc-uno');
+            const elementoDos = document.getElementById('desc-dos');
+
+            function alternar() {
+                if (elementoUno.style.visibility === 'hidden') {
+                    elementoUno.style.visibility = 'visible';
+                } else {
+                    elementoUno.style.visibility = 'hidden';
+                }
+                if (elementoDos.style.visibility === 'hidden') {
+                    elementoDos.style.visibility = 'visible';
+                } else {
+                    elementoDos.style.visibility = 'hidden';
+                }
+            }
+        </script>
+
+        <div class="detalle uno">Tarea 2</div>
+        <div class="detalle dos">Alexander Martínez González</div>
+
+
+
     </div>
 </body>
 
 </html>
-<!--<!DOCTYPE html5>
-<html>
-    <body>
-        <div>
-            <h1>Tarea #1</h1>
-            <h2>Estudiante: <i>Alexander Martínez González</i></h2>
-            <img src="images/foto.jpg" alt="Foto">
-        </div>
-        <small>*El estilo fue adquirido de fuentes externas</small>
-        <h3>Uso de div</h3>
-        <div>
-            <p>Division 1: Uso de grupos (hgroup - h1...)</p>
-            <hgroup>
-                <h1>Tema principal</h1>
-                <h2>Seccion del tema principal</h2>
-                <h3>Subtema de la seccion anterior</h3>
-                <h4>Un detalle dentro del subtema</h4>
-            </hgroup>
-        </div>
-        <div>
-            <p>Division 2: Uso de dirección (address)</p>
-            <address>
-                Teléfono <a href="tel:+50688775511">+506 88775511</a>
-            </address>
-        </div>
-        <div>
-            <p>Division 3: Uso de iframe y src</p>
-            <iframe src="//www.youtube.com/embed/Sbtsxt9NbV8" frameborder="1" height="300" width="600"></iframe>
-        </div>
-
-        <h3>Uso de ul (lista donde el orden no importa)</h3>
-        <ul>
-            <li>Rojo</li>
-            <li>Azul</li>
-            <li>Marrón</li>
-            <li>Naranja</li>
-            <li>Verde</li>
-        </ul>
-
-        <h3>Uso de ol (lista ordenada)</h3>
-        <ol type="A">
-            <li>Inicio</li>
-            <li>Desarrollo</li>
-            <li>Conclusión</li>
-        </ol>
-
-        <h3>Uso de dl - dt - dd (Lista Término - Descripción)</h3>
-        <dt>
-            <dt>Frío</dt>
-            <dd>Se encuentra en bajas temperaturas</dd>
-
-            <dt>Cansado</dt>
-            <dd>Que se encuentra carente de fuerzas y energía</dd>
-
-            <dt>Frágil</dt>
-            <dd>Fácil de romper</dd>
-        </dt>
-
-        <h3>Uso de figure - image - figcaption (Insertar Imagen y Descripción)</h3>
-        <figure>
-            <img src="images/salmon.jpg" alt="Imagen" height="200" width="250">
-            <figcaption>Imagen de un Salmon</figcaption>
-        </figure>
-
-        <h3>Uso de details - summary (Información desplegable)</h3>
-        <details>
-            <summary>Monitor</summary>
-            <p>Periférico de salida de imagen</p>
-        </details>
-        <details>
-            <summary>Micrófono</summary>
-            <p>Periférico de entrada de audio</p>
-        </details>
-
-        <h3>Uso de dialog</h3>
-        <button onclick="dialogEjemplo.showModal()">Mostrar Diálogo</button>
-
-        <dialog id="dialogEjemplo">
-            <h2>Dialogo</h2>
-            <p>Se muestra la información correctamente</p>
-            <button onclick="dialogEjemplo.close()">Cerrar</button>
-        </dialog>
-    
-        <p>La etiqueta 'p' se usa para escribir párrafos...</p><br><p>...Y la etiqueta 'br' para generar un salto de linea</p>
-
-        <h3>Texto preformateado (Etiqueta pre)</h3>
-        <pre>
-            La etiqueta pre se usa para
-            dar a un texto un formato 
-            con los espacios y saltos de líneas que se 
-            deseen.
-        </pre>
-
-        <h3>Uso de Citas blockqoute - q</h3>
-        <p>Uso de blockquote</p>
-        <blockquote cite = https://www.w3schools.com/tags/tag_blockquote.asp>
-            <p>La etiqueta 'blockquote' especifica una sección 
-            que se cita de otra fuente.</p>
-        </blockquote>
-        <q>Usa 'q' para citas de citas de una línea (cortas)</q><br><br>
-
-        <h3>Uso de abreviaturas (Ejemplo de abbr)</h3>
-        <p>El <abbr title="Doctor">Dr.</abbr> encontró la causa del dolor</p><br>
-
-        <h3>Uso de Definiciones (dfn)</h3>
-        <p><dfn>HTML</dfn> es un Lenguaje de Marcado de HiperTexto, usado para crear páginas web</p><br>
-
-        <h3>Etiqueta 'code'</h3>
-        <p>Esta etiqueta muestra un texto con un formato distinto para indicar que se trata de código.</p>
-        <p>Por ejemplo: La función <code>console.log()</code> imprime en la consola.</p><br>
-
-        <h3>Etiqueta 'kbd'</h3>
-        <p>Esta etiqueta muestra un texto con un formato distinto para indicar que se trata comandos del teclado.</p>
-        <p>Por ejemplo: La combinación <kbd>Ctrl + C</kbd> permite copiar textos e imagenes.</p><br>
-
-        <h3>Etiqueta 'strong' y 'em'</h3>
-        <strong>Strong se usa para resaltar importacia de un texto, normalmente en negrita</strong><br>
-        <em>Em se usa para enfatizar texto en forma de cursiva habitualmente</em><br><br>
-        
-        <h3>Etiquetas de formato de texto</h3>
-        <p>Se puede usar la etiqueta <b>'b'</b> para volver parte del texto en negrita.</p>
-        <p>También se puede usar la etiqueta <i>'i'</i> para indicar cursiva.</p>
-        <p><b><i>Es posible combinar ambos formatos.</i></b></p><br>
-
-        <h3>Marcar con 'mark'</h3>
-        <p>Esta etiqueta <mark>remarca una parte del texto</mark> según lo especificado</p><br>
-
-        <h3>Etiqueta 'small'</h3>
-        <small>Muestra texto en un tamaño inferior, usado para información secundaria</small><br>
-
-        <h3>Etiquetas de 'líneas' (del - ins)</h3>
-        <del>Muestra una línea atravesando el texto, indica que este fue eliminado</del><br>
-        <ins>Muestra el texto subrayado</ins><br>
-
-        <h3>Etiquetas de 'Indices' (sub - sup)</h3>
-        <p>Sub muestra el texto solicitado como <sub>subíndice</sub></p>
-        <p>Sup muestra el texto deseado como <sup>superíndice</sup></p><br>
-
-        <h3>Etiqueta 'time'</h3>
-        <p>Usado para horas y fechas, no suele dar un indicativo visual de uso</p>
-        <p>Ejemplo: El restaurante abre a las <time>10:00</time> de la mañana</p><br>
-
-        <h3>Etiqueta 'data'</h3>
-        <p>Usado para proveer un dato que puede ser leído por personas y máquinas <b>(No da señal de uso)</b></p>
-        <p>Ejemplo: El precio de la bebida es de <data value="1350.00">₡1350</data></p><br>
-
-        <h3>Etiqueta 'span'</h3>
-        <p>Usado para modificar parte del texto con <abbr title="JavaScript">JS</abbr></p>
-        <p>Ejemplo: Mi color favorito es el <span style="color: darkgreen;font-weight: bold;"><i>Verde</i></span></p><br>
-    
-        <h3>Etiqueta 'a'</h3>
-        <p>Asocia un texto con un enlace determinado</p>
-        <p>Enlace de prueba: <a href="https://www.w3schools.com/tags/tag_a.asp">Clic aquí</a></p><br>
-
-        <h3>Areas a las que se le pueden hacer clic en imagenes (map - area - img)</h3>
-        <p>Permite asociar un area de una imagen a un enlace.</p>
-        <p>'img' es para insertar imagenes, 'map' es para crear la zona interactiva y 'area' para las secciones del mapa.</p>
-        <strong>Prueba dando clic al teléfono</strong><br>
-        <img src="images/dispositivos.png" alt="Dispositivos" usemap="#mapaEjemplo" width="444" height="219"><br>
-        <map name="mapaEjemplo">
-            <area shape="rect" coords="304,44,366,164" href="https://es.wikipedia.org/wiki/Teléfono" alt="Teléfono">
-        </map>
-
-        <h3>Imagenes ajustable (picture - source)</h3>
-        <p>Muestra una imagen en distintos formatos según diversos parámetros como el tamaño de la pantalla</p>
-        <picture>
-            <source media="(min-width: 1200px)" srcset="images/verduras.jpg">
-            <source media="(min-width: 650px)" srcset="image/verduras.jpg">
-            <img src="images/verduras.jpg" alt="Verduras" style="width: auto;">
-        </picture><br>
-
-        <h3>Etiqueta 'canvas'</h3>
-        <p>Crea un lienzo en el que se pueden colocar tanto imagenes, figuras y textos</p>
-        <canvas id="canvaEjemplo" width="200", height="140" style="border: 1px solid #000;"></canvas>
-        <script>
-            const canvas = document.getElementById('canvaEjemplo');
-            const ctx = canvas.getContext('2d');
-
-            ctx.beginPath();
-            ctx.arc(30, 70, 20, 0, 2 * Math.PI);
-            ctx.fillStyle = 'red';
-            ctx.fill();
-
-            ctx.fillStyle = 'green';
-            ctx.fillRect(130, 10, 50, 100)
-        </script><br>
-
-        <h3>Etiqueta 'svg'</h3>
-        <p>Define un gráfico basado en vectores</p>
-        <svg width="180" height="120">
-            <rect x="10" y="10" rx="40" ry="20" width="165" height="100" style="fill:green;stroke:orange;stroke-width:5;opacity:0.5"/>
-        </svg>
-
-        <h3>Uso de audios (Etiqueta 'audio')</h3>
-        <audio controls>
-            <source src="images/aplausos.mp3" type="audio/mpeg">
-        </audio><br>
-
-        <h3>Uso de videos y subtitulos (video - track)</h3>
-        <video id="videoEjemplo" width="620" height="300" controls>
-            <source src="images/celebracion.mp4" type="video/mp4">
-            <track src="images/subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
-        </video>
-    </body>
-</html>-->
