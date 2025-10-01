@@ -12,10 +12,10 @@ Propiedades a Utilizar
     -  Overflow                         ✔
     -  Visibility                       ✔
 
-    3. Flexbox en CSS3
-    -  Flex Container
-    -  Flex Items
-    -  Flex Responsive
+    3. Flexbox en CSS3                  a
+    -  Flex Container                   ✔
+    -  Flex Items                       ✔
+    -  Flex Responsive                  a
 */
 
 * {
@@ -30,6 +30,11 @@ body {
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #8c9c73;
     line-height: 18px;
+}
+
+h2 {
+    color: #23a327;
+    margin: 0px 0px 10px 80px;
 }
 
 #outer {
@@ -188,18 +193,76 @@ p.p-pintura {
     line-height: normal;
 }
 
+.cont-detalle {
+    width: 100%;
+    text-align: center;
+}
+
 .detalle {
     font-size: 15px;
     width: 200px;
     color: #183919;
     text-align: center;
-    margin: 0px 500px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .uno {
-    float: left;
+    float: none;
 }
 
 .dos {
-    clear: left; /*Clear: Indica la NO adyacencia de un elemento en cierta dirección*/
+    clear: both; /*Clear: Indica la NO adyacencia de un elemento en cierta dirección*/
+}
+
+.cont-fila {
+    display: flex;  /*Flex Container*/
+    flex-direction: row; /*Coloca los elementos en forma de fila*/
+    justify-content: space-between; /*Deja un espacio equitativo entre los elementos*/
+    flex-wrap: wrap; /*Baja el contenido si falta espacio*/
+    background-color: #fff9d9;
+    max-width: 100%;
+    border: 4px;
+    padding: 12px 16px;
+    margin: 15px 80px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    gap: 20px;
+}
+
+.cont-fila > div {  /*Se convierten en Flex items por estar dentro de un contenedor Flex*/
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+/*Se puede ajustar los items de un flex container, aquí se usa order*/
+.gato {order: 1}
+.perro {order: 2}
+.pez {order: 3}
+
+.dibujo {
+
+    border: 1px solid black;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .cont-fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont-fila > div {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dibujo {
+        width: 100%;
+        height: auto;
+    }
 }

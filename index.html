@@ -19,7 +19,9 @@
                 <h1>Tarea #2 - Diseño de Aplicaciones Web</h1>
             </div>
         </header>
-
+        <br>
+        <!--Primera Parte-->
+        <h2>Fotografías</h2>
         <!--Presentación de imagenes-->
         <div class="exposicion">
             <!--Las imagenes son elementos de Linea-->
@@ -39,9 +41,8 @@
         </div>
 
         <!--Segunda parte-->
-
+        <h2>Pinturas</h2>
         <button class="ocultar" onclick="alternar()">Ocultar Descripción</button>
-
 
         <div class="exposicion">
             <img class="pintura" src="multimedia/elgrito.png" />
@@ -56,8 +57,8 @@
         <div class="exposicion">
             <img class="pintura" src="multimedia/lamonalisa.png" />
             <div id="desc-dos" class="info-pintura">
-                <strong class="strong-pintura">El Grito</strong>
-                <p class="p-pintura">El retrato de Lisa Gherardini, esposa de Francesco del Giocondo,​ más conocido
+                <strong class="strong-pintura">La Mona Lisa</strong>
+                <p class="p-pintura">El retrato de Lisa Gherardini, esposa de Francesco del Giocondo, más conocido
                     como La Gioconda (La Joconde, en francés) o Mona Lisa, es una obra pictórica de Leonardo da Vinci.
                     Fue adquirida por el rey Francisco I de Francia a comienzos del siglo XVI y desde entonces es
                     propiedad del Estado francés. Está expuesta en el Museo del Louvre de París, siendo, sin duda, la
@@ -65,6 +66,24 @@
             </div>
         </div>
 
+        <h2>Dibujos</h2>
+        <div class="cont-fila">
+            <div class="elem-fila pez">
+                <img src="multimedia/dibujopez.jpg" class="dibujo">
+                <p>Pescado</p>
+            </div>
+            <div class="elem-fila gato">
+                <img src="multimedia/dibujogato.jpg" class="dibujo">
+                <p>Gato</p>
+            </div>
+            <div class="elem-fila perro">
+                <img src="multimedia/dibujoperro.jpg" class="dibujo">
+                <p>Perro</p>
+            </div>
+
+        </div>
+
+        <!--Codigo de botón--------------------------------------------->
         <script>
             const elementoUno = document.getElementById('desc-uno');
             const elementoDos = document.getElementById('desc-dos');
@@ -83,11 +102,10 @@
             }
         </script>
 
-        <div class="detalle uno">Tarea 2</div>
-        <div class="detalle dos">Alexander Martínez González</div>
-
-
-
+        <div class="cont-detalle">
+            <div class="detalle uno">Tarea 2</div>
+            <div class="detalle dos">Alexander Martínez González</div>
+        </div>
     </div>
 </body>
 
